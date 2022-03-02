@@ -4,19 +4,20 @@ $--card-acn: rgb(171, 92, 219);
 $--card-txt: rgb(255, 255, 255);
 
 .card-wrap {
-  overflow: hidden;
-
-  margin-block: 88px;
   box-shadow: rgba(23, 25, 41, 20%) 0 20px 20px -10%;
   border-radius: 8px;
   width: 327px;
 
   background-color: $--card-bkg;
 
-  .card-hero-img {
+  .card-hero-img-mob {
     margin-bottom: 40px;
     border-radius: 8px 8px 0 0;
     width: 327px;
+  }
+
+  .card-hero-img-dsk {
+    display: none;
   }
 
   .card-txt-wrap {
@@ -46,38 +47,85 @@ $--card-txt: rgb(255, 255, 255);
       line-height: 25px;
       font-weight: 400;
     }
-  }
 
-  .card-sta-wrap {
-    flex-direction: column;
-    align-items: center;
+    .card-sta-wrap {
+      flex-direction: column;
+      align-items: center;
+
+      display: flex;
+
+      margin-bottom: 32px;
+
+      color: $--card-txt;
+
+      .card-sta {
+        margin-bottom: 24px;
+
+        .card-sta-hdn {
+          margin-bottom: 4px;
+
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        .card-sta-sub {
+          opacity: 0.5;
+
+          font-size: 12px;
+          font-weight: 300;
+          font-family: 'Lexend Deca', sans-serif;
+          letter-spacing: 1px;
+        }
+
+        .card-sta-sub:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1110px) {
+  .card-wrap {
+    flex-direction: row-reverse;
 
     display: flex;
+    width: 1110px;
 
-    margin-bottom: 32px;
-
-    color: $--card-txt;
-
-    .card-sta-hdn {
-      margin-bottom: 4px;
-
-      font-size: 24px;
-      font-weight: 700;
+    .card-hero-img-mob {
+      display: none;
     }
 
-    .card-sta-sub {
-      margin-bottom: 24px;
-
-      opacity: 0.5;
-
-      font-size: 12px;
-      font-weight: 300;
-      font-family: 'Lexend Deca', sans-serif;
-      letter-spacing: 1px;
+    .card-hero-img-dsk {
+      display: block;
     }
 
-    .card-sta-sub:last-of-type {
-      margin-bottom: 0;
+    .card-txt-wrap {
+      margin: 71px 95px 0 72px;
+      padding-inline: 0;
+
+      .card-hdn {
+        text-align: left;
+        margin-bottom: 25px;
+
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      .card-bdy {
+        text-align: left;
+        margin-bottom: 72px;
+
+        width: 374px;
+      }
+      .card-sta-wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+        margin-bottom: 59px;
+        width: 350px;
+      }
     }
   }
 }
