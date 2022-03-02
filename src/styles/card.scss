@@ -6,6 +6,7 @@ $--card-txt: rgb(255, 255, 255);
 .card-wrap {
   overflow: hidden;
 
+  margin-block: 88px;
   box-shadow: rgba(23, 25, 41, 20%) 0 20px 20px -10%;
   border-radius: 8px;
   width: 327px;
@@ -19,14 +20,13 @@ $--card-txt: rgb(255, 255, 255);
   }
 
   .card-txt-wrap {
-    width: 100%;
     padding-inline: 31.5px;
 
     text-align: center;
     color: $--card-txt;
 
     .card-hdn {
-      margin-bottom: 16.5px;
+      margin-bottom: 16px;
 
       font-size: 28px;
       line-height: 32px;
@@ -54,17 +54,17 @@ $--card-txt: rgb(255, 255, 255);
 
     display: flex;
 
-    width: 100%;
+    margin-bottom: 32px;
 
     color: $--card-txt;
 
     .card-sta-hdn {
-      margin-bottom: 10px;
+      margin-bottom: 4px;
 
       font-size: 24px;
       font-weight: 700;
     }
-    
+
     .card-sta-sub {
       margin-bottom: 24px;
 
@@ -77,7 +77,7 @@ $--card-txt: rgb(255, 255, 255);
     }
 
     .card-sta-sub:last-of-type {
-      margin-bottom: 32px;
+      margin-bottom: 0;
     }
   }
 }
