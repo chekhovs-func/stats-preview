@@ -15,14 +15,14 @@ $--app-bkg: rgb(10, 12, 28);
   justify-content: center;
   align-items: center;
 
-  height: 956px;
+  height: 1056px;
 
   display: flex;
 
   background-color: $--app-bkg;
 }
 
-@media only screen and (min-height: 956px) {
+@media only screen and (min-height: 1056px) {
   .app-wrap {
     height: 100vh;
   }
